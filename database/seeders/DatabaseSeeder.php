@@ -57,13 +57,13 @@ class DatabaseSeeder extends Seeder
         ]);
 
         EventUserRelation::factory()->create([
-            'type' => 'rsvp',
+            'type' => 'attendance',
             'event_id' => $pub1,
             'user_id' => $user2,
         ]);
 
         EventUserRelation::factory()->create([
-            'type' => 'rsvp',
+            'type' => 'attendance',
             'event_id' => $priv1,
             'user_id' => $user4,
         ]);

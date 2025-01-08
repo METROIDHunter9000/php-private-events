@@ -11,10 +11,10 @@ class EventUserRelation extends Model
 {
     use HasChildren, HasFactory;
 
-    protected $fillable = ['type'];
+    protected $fillable = ['type', 'user_id', 'event_id'];
 
     protected $childTypes = [
-        'rsvp' => EventUserRSVP::class,
+        'attendance' => EventUserAttendance::class,
         'invitation' => EventUserInvitation::class,
         'request' => EventUserRequest::class,
     ];

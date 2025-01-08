@@ -23,7 +23,7 @@ class EventFactory extends Factory
             'title' => fake()->text(),
             'body' => fake()->text(),
             'date' => fake()->date(),
-            'is_private' => 'false',
+            'is_private' => false,
         ];
     }
 
@@ -32,7 +32,7 @@ class EventFactory extends Factory
         return $this->state(function (array $attr)
         {
             return [
-                'is_private' => 'false',
+                'is_private' => false,
             ];
         });
     }
@@ -42,7 +42,7 @@ class EventFactory extends Factory
         return $this->state(function (array $attr)
         {
             return [
-                'is_private' => 'true',
+                'is_private' => true,
             ];
         });
     }

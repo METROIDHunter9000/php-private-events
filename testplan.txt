@@ -1,0 +1,29 @@
+User cannot RSVP himself for private event
+User cannot RSVP himself for an event he organized
+
+Invitations:
+    Organizer can invite any user to the event if:
+        - user has no existing relation to the event (invited, requested, attending), and
+        - user is not the organizer, and
+        - the event is private
+    User can "accept" an invitation for himself & become an attending member
+    User can "reject" an invitation for himself
+    User cannot accept or reject invitations for other users
+    User cannot invite users to an event he did not organize
+    Organizer can revoke invitations to their events
+
+Requests:
+    User can request to join an event if:
+        - he has no existing relation to the event (invited, requested, attending), and
+        - he is not the organizer, and
+        - the event is private
+    Organizer can "accept" a user's attendance request & make him an attending member
+    Organizer can "reject" a user's attendance request
+    Other users cannot accept or reject attendance requests on behalf of the organizer
+    User can revoke his requests to join
+
+RSVP:
+    User can RSVP to an event if:
+        - he has no existing relation to the event (invited, requested, attending), and
+        - he is not the organizer, and
+        - the event is public

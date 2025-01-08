@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Parental\HasParent;
 
-class EventUserRSVP extends EventUserRelation
+class EventUserAttendance extends EventUserRelation
 {
     use HasParent;
     public function impersonate($user) {
