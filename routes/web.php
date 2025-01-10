@@ -26,11 +26,17 @@ Route::resource('events', EventController::class);
 Route::resource('attendance', EventUserAttendanceController::class, [
     'only' => ['store', 'destroy'],
 ]);
+
 Route::resource('requests', EventUserRequestController::class, [
-    'only' => ['store', 'destroy'],
+    'only' => ['store'],
 ]);
+Route::delete('/requests/{request}/{decision}', [EventUserRequestController::class, 'destroy'])
+    ->name('requests.destroy');
+
 Route::resource('invitations', EventUserInvitationController::class, [
-    'only' => ['store', 'destroy'],
+    'only' => ['store'],
 ]);
+Route::delete('/invitations/{invitation}/{decision}', [EventUserInvitationController::class, 'destroy'])
+    ->name('invitations.destroy');
 
 require __DIR__.'/auth.php';

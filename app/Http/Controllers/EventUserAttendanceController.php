@@ -6,7 +6,6 @@ use App\Models\Event;
 use App\Models\EventUserAttendance;
 use App\Models\EventUserRelation;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
 
 class EventUserAttendanceController extends Controller
 {
@@ -24,7 +23,7 @@ class EventUserAttendanceController extends Controller
         $user = auth()->user();
         if(! $user)
         {
-            return response('Must be authenticated to perform this action', 403);
+            return response('Must be authenticated to perform this action', 401);
         }
         if($user->id != $attendee_id)
         {
