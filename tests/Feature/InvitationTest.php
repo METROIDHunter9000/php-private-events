@@ -112,7 +112,7 @@ test('organizer cannot invite anyone who is already invited, attending, or reque
     $record1 = EventUserInvitation::where('user_id', $user1->id)->where('event_id', $event->id)->first();
     $record2 = EventUserInvitation::where('user_id', $user2->id)->where('event_id', $event->id)->first();
     $record3 = EventUserInvitation::where('user_id', $user3->id)->where('event_id', $event->id)->first();
-    expect($record1)->toBeNull();
+    expect($record1)->not->toBeNull();
     expect($record2)->toBeNull();
     expect($record3)->toBeNull();
 });
